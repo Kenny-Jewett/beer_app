@@ -3,7 +3,7 @@ import FilterList from '../FilterList/FilterList';
 import SearchBox from '../SearchBox/SearchBox';
 
 const Navbar = (props) => {
-    const { searchterm, handleInput } = props;
+    const { searchterm, handleInput, handleFilter } = props;
 
   return (
     <div>
@@ -12,7 +12,7 @@ const Navbar = (props) => {
                 searchterm={searchterm} 
                 handleInput={handleInput} />
         </div>
-        <FilterList />    
+        <FilterList handleFilter={handleFilter} />    
     </div>
   )
 }

@@ -35,7 +35,11 @@ const Main = () => {
   return (
       <>
       <div>
-        <Navbar searchTerm={searchTerm} handleInput={handleInput} />
+        <Navbar 
+            searchTerm={searchTerm} 
+            handleInput={handleInput} 
+            handleFilter={handleFilter} 
+            />
       </div>
       <button onClick={getBeer}>API Test</button>
       <Cardlist beerData={filteredBeerData} />
