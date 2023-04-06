@@ -27,6 +27,11 @@ const Main = () => {
         return beersNameLower.includes(searchTerm) && beers.name;
     });
 
+    const handleFilter = (event) => {
+        console.log(event.target.value);
+    }
+
+
   return (
       <>
       <div>
