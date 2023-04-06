@@ -4,12 +4,6 @@ import Main from './containers/Main/Main';
 
 const App = () => {
     
-
-    
-
-
-
-
   return (
     <>   
     <Main />
