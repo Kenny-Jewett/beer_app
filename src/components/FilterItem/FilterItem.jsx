@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const FilterItem = (props) => {
     const { name, value, handleFilter } = props;
+    
 
   return (
     <>
