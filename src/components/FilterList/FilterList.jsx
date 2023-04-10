@@ -8,9 +8,21 @@ const FilterList = (props) => {
 
   return (
     <>
-     <FilterItem  name={"High ABV"} value={"abv"} handleFilter={handleFilter} />
-     <FilterItem  name={"Classic Range"} value={"first_brewed"} handleFilter={handleFilter} />
-     <FilterItem  name={"Acidic (ph < 4)" } value={"ph"} handleFilter={handleFilter} />
+     <FilterItem  
+        name={"High ABV"}
+        value={"abv"} 
+        handleFilter={handleFilter} 
+        />
+     <FilterItem  
+        name={"Classic Range"} 
+        value={"first_brewed"} 
+        handleFilter={handleFilter} 
+        />
+     <FilterItem  
+        name={"Acidic (ph < 4)" } 
+        value={"ph"} 
+        handleFilter={handleFilter} 
+        />
     </>
   )
 }
