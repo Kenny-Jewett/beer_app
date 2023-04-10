@@ -35,16 +35,16 @@ const Main = () => {
 
         switch (true) {
             case event.target.value === "ph" && isFilteredByPh === true:
-                setIsFilteredByPh(!isFilteredByPh)
+                setIsFilteredByPh(!isFilteredByPh);
                 const filterByPh = beerData?.filter((beers) => beers.ph < 4);                
-                setBeerData(filterByPh)              
+                setBeerData(filterByPh);              
                 break;
             case event.target.value === "ph" && isFilteredByPh === false:
-                setIsFilteredByPh(!isFilteredByPh)
+                setIsFilteredByPh(!isFilteredByPh);
                 getBeer();
                 break;
             case event.target.value === "first_brewed" && isFilteredByClassicRange === true:
-                setIsFilteredByClassicRange(!isFilteredByClassicRange)
+                setIsFilteredByClassicRange(!isFilteredByClassicRange);
                 const filterByClassicRange = beerData?.filter((beers) => {
                     const beerYear = parseInt(beers.first_brewed.slice(3, 7));
                     if(beerYear <= 2010){
@@ -54,13 +54,13 @@ const Main = () => {
                 setBeerData(filterByClassicRange);                
                 break;
             case event.target.value === "first_brewed" && isFilteredByClassicRange === false:
-                setIsFilteredByClassicRange(!isFilteredByClassicRange)
+                setIsFilteredByClassicRange(!isFilteredByClassicRange);
                 getBeer();
                 break;
             case event.target.value === "abv" && isFilteredByAbv === true:
-                setIsFilteredByAbv(!isFilteredByAbv)
-                const filterByAbv = beerData?.filter((beers) => beers.abv > 6)              
-                setBeerData(filterByAbv)                
+                setIsFilteredByAbv(!isFilteredByAbv);
+                const filterByAbv = beerData?.filter((beers) => beers.abv > 6);              
+                setBeerData(filterByAbv);                
                 break; 
             case event.target.value === "abv" && isFilteredByAbv === false:
                 setIsFilteredByAbv(!isFilteredByAbv)
