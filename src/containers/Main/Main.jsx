@@ -8,17 +8,29 @@ const Main = () => {
     const [ isFilteredByPh, setIsFilteredByPh ] = useState(true);
     const [ isFilteredByClassicRange, setIsFilteredByClassicRange ] = useState(true);
     const [ isFilteredByAbv, setIsFilteredByAbv ] = useState(true);
+
+    const apiURL = `https://api.punkapi.com/v2/beers?per_page=80` 
     
 
     const getBeer = async () => {
-        const url = `https://api.punkapi.com/v2/beers?per_page=80`
+        const url = apiURL;
         const res = await fetch(url);
-        const data = await res.json();        
-        setBeerData(data);
+        const data = await res.json();    
+       
+        
+               
+            
+          
+       
+       setBeerData(data)
     };
-    
-    useEffect(() => {getBeer()}, []);
 
+    useEffect(() => {
+         getBeer()        
+    
+    }, []);
+
+   
     const handleInput = (event) => {
         const cleanInput = event.target.value.toLowerCase();
         setSearchTerm(cleanInput);
@@ -40,7 +52,7 @@ const Main = () => {
                 setBeerData(filterByPh);              
                 break;
             case event.target.value === "ph" && isFilteredByPh === false:
-                setIsFilteredByPh(!isFilteredByPh);
+                setIsFilteredByPh(!isFilteredByPh);                
                 getBeer();
                 break;
             case event.target.value === "first_brewed" && isFilteredByClassicRange === true:
@@ -68,8 +80,8 @@ const Main = () => {
                 break;          
             default:
                 break;
-        }        
-    }
+        };       
+    };
     
 
 
