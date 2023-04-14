@@ -15,14 +15,9 @@ const Main = () => {
     const getBeer = async () => {
         const url = apiURL;
         const res = await fetch(url);
-        const data = await res.json();    
-       
-        
-               
-            
-          
-       
-       setBeerData(data)
+        const data = await res.json();
+
+        setBeerData(data)
     };
 
     useEffect(() => {
@@ -42,8 +37,7 @@ const Main = () => {
         return beersNameLower.includes(searchTerm) && beers.name;
     });
 
-    const handleFilter = (event) => {
-       console.log(event.target.value);
+    const handleFilter = (event) => {       
 
         switch (true) {
             case event.target.value === "ph" && isFilteredByPh === true:
