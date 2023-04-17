@@ -20,10 +20,7 @@ const Main = () => {
         setBeerData(data)
     };
 
-    useEffect(() => {
-         getBeer()        
-    
-    }, []);
+    useEffect(() => {getBeer()}, []);
 
    
     const handleInput = (event) => {
@@ -43,7 +40,7 @@ const Main = () => {
             case event.target.value === "ph" && isFilteredByPh === true:
                 setIsFilteredByPh(!isFilteredByPh);
                 const filterByPh = beerData?.filter((beers) => beers.ph < 4);                
-                setBeerData(filterByPh);              
+                setBeerData(filterByPh);
                 break;
             case event.target.value === "ph" && isFilteredByPh === false:
                 setIsFilteredByPh(!isFilteredByPh);                
