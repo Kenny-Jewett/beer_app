@@ -6,7 +6,7 @@ const SearchBox = (props) => {
   return (
     <div>
         <form action="">
-            <label htmlFor="">Search: </label>
+            <label htmlFor="Search bar">Search: </label>
             <input 
             type="text"
             value={searchTerm}

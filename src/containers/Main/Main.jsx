@@ -30,8 +30,10 @@ const Main = () => {
     
     const searchedBeerData = beerData?.filter((beers) => {
         const beersNameLower = beers.name.toLowerCase();
+        const beersTaglineLower = beers.tagline.toLowerCase();
         
-        return beersNameLower.includes(searchTerm) && beers.name;
+        return (beersNameLower.includes(searchTerm) && beers.name)
+             || (beersTaglineLower.includes(searchTerm) && beers.tagline);
     });
 
     const handleFilter = (event) => {       
