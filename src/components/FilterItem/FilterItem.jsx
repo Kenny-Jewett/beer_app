@@ -7,6 +7,7 @@ export const FilterItem = (props) => {
   return (
     <>
         <input 
+            role="filter"
             type="checkbox" 
             name={name} 
             value={value} 
