@@ -10,7 +10,7 @@
     padding: 1rem;
     contain: content;
   
-    .beer-card__image {
+    &__image {
       max-height: 30vh;  
       max-width: 20vw;
       width: 100%;
@@ -18,7 +18,7 @@
       border-radius: 3px;
     }
   
-    .beer-card__content {
+    &__content {
       padding: 1rem;
       display: flex;
       flex-direction: column;      
