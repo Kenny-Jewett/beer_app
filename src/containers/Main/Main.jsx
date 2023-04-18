@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar';
 
 const Main = () => {
     const [ beerData, setBeerData ] = useState();
-    const [ searchTerm, setSearchTerm] = useState("");
+    const [ searchTerm, setSearchTerm ] = useState("");
     const [ isFilteredByPh, setIsFilteredByPh ] = useState(true);
     const [ isFilteredByClassicRange, setIsFilteredByClassicRange ] = useState(true);
     const [ isFilteredByAbv, setIsFilteredByAbv ] = useState(true);
